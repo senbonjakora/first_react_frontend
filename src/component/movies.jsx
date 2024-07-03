@@ -117,7 +117,6 @@ const Movies = ({ user }) => {
 
   const paginatedMovies = Paginate(sortedMovies, currentPage, pageSize);
 
-
   return (
     <div className="row">
       <div className="col-3 ms-3">

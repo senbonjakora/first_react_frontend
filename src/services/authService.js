@@ -5,7 +5,7 @@ import { jwtDecode } from "jwt-decode";
 const apiEndPoint = "/auth";
 const jsonWebTokenKey = "jsonWebToken";
 
-http.setJsonWebToken(getJsonWebToken());
+http.setJsonWebToken(getexpJsonWebToken());
 
 export async function login(user) {
   const result = await http.post(apiEndPoint, {
@@ -36,7 +36,7 @@ export function loginWithJsonWebToken(jsonWebToken) {
   localStorage.setItem(jsonWebTokenKey, jsonWebToken);
 }
 
-export function getJsonWebToken() {
+export function getexpJsonWebToken() {
   return localStorage.getItem(jsonWebTokenKey);
 }
 
@@ -45,5 +45,5 @@ export default {
   logout,
   getCurrentUser,
   loginWithJsonWebToken,
-  getJsonWebToken
+  getexpJsonWebToken
 };
